@@ -1,0 +1,25 @@
+{# templates/lucky/number.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	{% if app.user %}
+		<h1 class="text-center font-bold text-[4rem]">hi<h1>
+				<div class="text-center">
+					<a class="hover:underline text-slate-950" href="{{path('index')}}">home</a>
+				</div>
+				<div class="text-center">
+					<div class="mt-10">welcome to the secret page.</div>
+					<div class="mt-10">enter your website.</div>
+				</div>
+				<div class="text-center">
+					{{form_start(form)}}
+					{{form_row(form.website, {label: false})}}
+					{{form_end(form)}}
+				</div>
+				<div class="text-center mt-6"></div>
+				<h1>your website is:</h1>
+				<a class="text-blue-500 hover:underline" href="{{hello}}">{{hello}}</a>
+			{% else %}
+				<h1 class="font-bold">log in to view this page.</h1>
+			{% endif %}
+		{% endblock %}
