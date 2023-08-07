@@ -15,7 +15,6 @@ use Symfony\Component\Validator\Validator\ValidatorInterface;
 
 class TinyKangarooController extends AbstractController
 {
-    private $userdata;
     #[Route('/tiny/kangaroo', name: 'app_tiny_kangaroo')]
     public function index(): Response
     {

@@ -16,10 +16,9 @@ use Symfony\Component\Routing\Annotation\Route;
 class LuckyController extends AbstractController
 {
 
-    #[Route('/lucky/number', name: "lucky_number")]
+    #[Route('/members', name: "members")]
     public function number(UserRepository $userRepo, EntityManagerInterface $entityManager, LoggerInterface $logger): Response
     {
-
 
         $queryBuilder = $entityManager->createQueryBuilder();
 
@@ -38,7 +37,7 @@ class LuckyController extends AbstractController
             $stuff[] = $email;
         }
 
-        return $this->render('number.html.twig', [
+        return $this->render('members.html.twig', [
             'number' => $number,
             'test' => $stuff,
             'count' => $count,

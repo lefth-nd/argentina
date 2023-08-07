@@ -1,0 +1,17 @@
+{# templates/lucky/number.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	{% if app.user %}
+		<h1 class="text-center font-bold text-[4rem]">hi<h1>
+				<div class="text-center">
+					<span class="font-bold">Our Users and their passwords:</span>
+					{% for t in test %}
+						<h1>{{t.getEmail()}}</h1>
+						<h1>{{t.getPassword()}}</h1>
+					{% endfor %}
+				</div>
+			{% else %}
+				<h1 class="font-bold">log in to view this page.</h1>
+			{% endif %}
+		{% endblock %}
