@@ -1,10 +1,10 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+	<h1 class="text-[4rem] font-bold">404</h1>
 	<h1>Page not found</h1>
-
-	<p>
+	<p class="mt-4">
 		The requested page couldn't be located.
-		<a href="{{ path('index') }}">return to the homepage</a>.
 	</p>
+	<a class="hover:underline text-blue-500" href="{{ path('index') }}">Return to the homepage.</a>
 {% endblock %}
