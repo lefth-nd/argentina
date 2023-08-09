@@ -1,9 +1,9 @@
 {# templates/lucky/number.html.twig #}
+{# hi #}
 {% extends 'base.html.twig' %}
 
-{% block body %}
-	{% if app.user %}
-		<h1 class="text-center font-bold text-[4rem]">hi<h1>
+	{% block body %}
+		{% if app.user %}<h1 class="text-center font-bold text-[4rem]"> hi<h1>
 				<div class="text-center">
 					<a class="hover:underline text-slate-950" href="{{path('index')}}">home</a>
 				</div>
